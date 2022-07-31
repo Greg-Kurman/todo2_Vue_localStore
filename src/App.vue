@@ -54,35 +54,35 @@ const removeTodo = todo => {
 	<main class="app">
 		<section class="greetings">
 			<h2 class="title">
-				What's up <input type="text" placeholder="name here" v-model="name" />
+				Привет <input type="text" placeholder="ваше имя" v-model="name" />
 			</h2>
 		</section>
 
 		<section class="create-todo">
-			<h3>Create ToDo</h3>
+			<h3>Создай свой туду или чек лист</h3>
 			<form @submit.prevent="addTodo">
-				<h4>What's your todo list ? </h4>
-				<input type="text" placeholder="do todo today" v-model="input_content">
-				<h4>Pick a category</h4>
+				<h4>Что нужно сделать ? </h4>
+				<input type="text" placeholder="выучить Вью" v-model="input_content">
+				<h4>Выбери категорию </h4>
 				<div class="options">
 					<label>
 						<input type="radio" name="category" id="category1" value="business" v-model="input_category">
 						<span class="business bubble"> </span>
-						<div>Business</div>
+						<div>Чеклист</div>
 					</label>
 					<label>
 						<input type="radio" name="category" id="category1" value="personal" v-model="input_category">
 						<span class="personal bubble"> </span>
-						<div>Personal</div>
+						<div>Задание</div>
 					</label>
 				</div>
-				<input type="submit" value="Add todo">
+				<input type="submit" value="Добавить">
 			</form>
 		</section>
 
 
 		<section class="todo-list">
-			<h3>To do list</h3>
+			<h3>Список</h3>
 			<div class="list">
 				<div v-for="todo in todos_asc" :class="`todo-item ${todo.done && 'done'}`">
 					<label for="">
@@ -95,7 +95,7 @@ const removeTodo = todo => {
 					</div>
 
 					<div class="actions">
-						<button class="delete" @click="removeTodo(todo)">delete</button>
+						<button class="delete" @click="removeTodo(todo)">Удалить</button>
 					</div>
 				</div>
 			</div>
