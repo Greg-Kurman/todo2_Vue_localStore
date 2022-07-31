@@ -84,7 +84,7 @@ const removeTodo = todo => {
 		<section class="todo-list">
 			<h3>Список</h3>
 			<div class="list">
-				<div v-for="todo in todos_asc" :class="`todo-item ${todo.done && 'done'}`">
+				<div v-for="todo in todos_asc"  v-bind:key="list" :class="`todo-item ${todo.done && 'done'}`">
 					<label for="">
 						<input type="checkbox" v-model="todo.done">
 						<span :class="`bubble ${todo.category.value}`"></span>

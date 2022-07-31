@@ -29,10 +29,8 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 }
 
 body {
-	display: flex;
-	justify-items: center;
-	align-items: center;
-	max-width: 50%;
+	margin: 100px auto;
+	max-width: 500px;
 	background: var(--light);
 	color: var(--dark);
 }
